@@ -32,17 +32,18 @@ int main(int argc, char *argv[])
     {
         Info<< "Time = " << runTime.timeName() << nl << endl;
 
-//        while (simple.correctNonOrthogonal())
-//        {
-            fvScalarMatrix TEqn
-            (
-                fvm::laplacian(DT, T)
-            );
+
+            fvScalarMatrix TEqn(fvm::laplacian(DT, T));
 
             TEqn.solve();
-//        }
+
+
+        // also calculate the difference in T before and after the solve() function is called.
+        
 
         runTime.write();
+
+        
 
         runTime.printExecutionTime(Info);
     }

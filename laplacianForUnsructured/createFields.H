@@ -1,7 +1,6 @@
 Info<< "Reading field T\n" << endl;
 
-volScalarField T
-(
+volScalarField T (
     IOobject
     (
         "T",
@@ -13,6 +12,17 @@ volScalarField T
     mesh
 );
 
+volScalarField diffT (
+    IOobject
+    (
+        "diffT",
+        runTime.timeName(),
+        mesh,
+        IOobject::NO_READ,
+        IOobject::AUTO_WRITE
+    ),
+    mesh
+);
 
 Info<< "Reading transportProperties\n" << endl;
 

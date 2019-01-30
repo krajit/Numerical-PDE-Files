@@ -1,0 +1,11 @@
+# HW 1
+
+Modify the given solver so that it looks for "F" in the 0 directory and always solves for F.
+
+
+
+
+# HW 2
+
+Create a new field variable "diffT" which calculates the difference between two iterations of T.
+
